@@ -1,0 +1,25 @@
+# TLS front door for MyBuddy Connect. Caddy obtains and renews the certificate automatically.
+# No access log is configured on purpose: the API logs what it needs, without request contents.
+{
+	email {$MYBUDDY_ACME_EMAIL}
+}
+
+{$MYBUDDY_DOMAIN} {
+	encode zstd gzip
+
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "no-referrer"
+		-Server
+	}
+
+	# Small JSON bodies only. The signaling WebSocket is exempt: after the upgrade its frames are
+	# bounded by the API itself.
+	@notSignal not path /v1/signal
+	request_body @notSignal {
+		max_size 64KB
+	}
+
+	reverse_proxy connect-api:8787
+}

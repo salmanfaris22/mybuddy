@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mybuddy.local/protocol/envelope.v1.schema.json",
+  "title": "MyBuddy Envelope v1",
+  "description": "Common envelope for every MyBuddy L3 event. Payload schemas per type are in events.v1.json.",
+  "type": "object",
+  "required": ["version", "type", "sessionId", "sequence", "sentAt", "payload"],
+  "properties": {
+    "version": { "const": 1 },
+    "type": { "type": "string", "pattern": "^[a-z]+(\\.[a-z]+)*$", "maxLength": 64 },
+    "sessionId": { "type": "string", "pattern": "^[A-Za-z0-9_-]{8,64}$" },
+    "sequence": { "type": "integer", "minimum": 1, "maximum": 9007199254740991 },
+    "sentAt": { "type": "string", "format": "date-time", "maxLength": 40 },
+    "replyTo": { "type": "integer", "minimum": 1, "maximum": 9007199254740991 },
+    "payload": { "type": "object" }
+  },
+  "additionalProperties": true
+}

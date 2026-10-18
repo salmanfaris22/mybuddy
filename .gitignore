@@ -1,0 +1,11 @@
+.DS_Store
+
+# Secrets and signing material never belong in the repository (see scripts/secret-scan.sh).
+.env
+*.jks
+*.keystore
+*.p12
+*.p8
+*.pem
+*.key
+*.mobileprovision

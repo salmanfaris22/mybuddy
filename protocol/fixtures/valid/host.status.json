@@ -1,0 +1,1 @@
+{"version":1,"type":"host.status","sessionId":"s_fixture0001","sequence":1,"sentAt":"2026-10-16T08:30:00.000Z","payload":{"hostName":"MacBook Air","osVersion":"macOS 26.4.1","appVersion":"0.1.0","screenSharing":false,"inputControl":false,"activeCapabilities":["health.read"]}}

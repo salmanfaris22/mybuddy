@@ -1,0 +1,1 @@
+{"version":1,"type":"ai.complete","sessionId":"s_fixture0001","sequence":1,"sentAt":"2026-10-16T08:30:00.000Z","payload":{"requestId":"6f1c2b9e-1d2a-4c7e-9a51-3b8f0d2e4a10","stopReason":"end_turn","servedBy":"claude-opus-5-5","usage":{"inputTokens":120,"outputTokens":48}}}

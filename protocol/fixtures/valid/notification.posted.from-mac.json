@@ -1,0 +1,1 @@
+{"version":1,"type":"notification.posted","sessionId":"s_fixture0001","sequence":1,"sentAt":"2026-10-16T08:30:00.000Z","payload":{"notificationId":"mac_battery_low","appPackage":"app.mybuddy.mac","appLabel":"MyBuddy","title":"Mac battery low","text":"12% — connect the charger","postedAt":"2026-10-16T08:30:00.000Z","redaction":"none"}}

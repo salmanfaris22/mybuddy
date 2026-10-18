@@ -1,0 +1,1 @@
+{"version":1,"type":"screen.state","sessionId":"s_fixture0001","sequence":1,"sentAt":"2026-10-16T08:30:00.000Z","payload":{"state":"live","quality":"auto","tier":"balanced","displayId":"1","width":1280,"height":800,"fps":30,"source":"display","displays":[{"displayId":"1","name":"Built-in Retina Display","width":2560,"height":1600,"main":true}]}}

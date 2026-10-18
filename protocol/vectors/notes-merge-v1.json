@@ -1,0 +1,35 @@
+{
+  "comment": "Shared notes merge rules (PROTOCOL.md §5.11). Both apps must give these answers. Times are epoch milliseconds; on the wire they are ISO-8601 UTC with milliseconds. incomingWins: replace the local copy with the incoming one. toSend: the ids this side sends as notes.put after reading the peer's notes.index.",
+  "merge": [
+    { "name": "missing locally", "local": null, "incoming": { "updatedAt": 1000, "deleted": false, "text": "a" }, "incomingWins": true },
+    { "name": "newer incoming wins", "local": { "updatedAt": 1000, "deleted": false, "text": "a" }, "incoming": { "updatedAt": 2000, "deleted": false, "text": "b" }, "incomingWins": true },
+    { "name": "older incoming loses", "local": { "updatedAt": 2000, "deleted": false, "text": "b" }, "incoming": { "updatedAt": 1000, "deleted": false, "text": "a" }, "incomingWins": false },
+    { "name": "newer delete wins", "local": { "updatedAt": 1000, "deleted": false, "text": "a" }, "incoming": { "updatedAt": 1001, "deleted": true, "text": "" }, "incomingWins": true },
+    { "name": "edit after delete revives", "local": { "updatedAt": 1000, "deleted": true, "text": "" }, "incoming": { "updatedAt": 1500, "deleted": false, "text": "back" }, "incomingWins": true },
+    { "name": "same time: delete wins", "local": { "updatedAt": 1000, "deleted": false, "text": "a" }, "incoming": { "updatedAt": 1000, "deleted": true, "text": "" }, "incomingWins": true },
+    { "name": "same time: kept over deleted loses", "local": { "updatedAt": 1000, "deleted": true, "text": "" }, "incoming": { "updatedAt": 1000, "deleted": false, "text": "a" }, "incomingWins": false },
+    { "name": "same time: larger text wins", "local": { "updatedAt": 1000, "deleted": false, "text": "apple" }, "incoming": { "updatedAt": 1000, "deleted": false, "text": "banana" }, "incomingWins": true },
+    { "name": "same time: smaller text loses", "local": { "updatedAt": 1000, "deleted": false, "text": "banana" }, "incoming": { "updatedAt": 1000, "deleted": false, "text": "apple" }, "incomingWins": false },
+    { "name": "identical: nothing changes", "local": { "updatedAt": 1000, "deleted": false, "text": "a" }, "incoming": { "updatedAt": 1000, "deleted": false, "text": "a" }, "incomingWins": false }
+  ],
+  "toSend": [
+    {
+      "name": "peer is empty: send every live note, not tombstones",
+      "local": [ { "id": "6f1c2b9e-1d2a-4c7e-9a51-3b8f0d2e4a10", "updatedAt": 1000, "deleted": false }, { "id": "0b7e9a44-5c21-4f0e-8d9b-7a6c5e4d3b21", "updatedAt": 1000, "deleted": true } ],
+      "peer": [],
+      "send": [ "6f1c2b9e-1d2a-4c7e-9a51-3b8f0d2e4a10" ]
+    },
+    {
+      "name": "send what is newer here, including a newer delete",
+      "local": [ { "id": "6f1c2b9e-1d2a-4c7e-9a51-3b8f0d2e4a10", "updatedAt": 2000, "deleted": false }, { "id": "0b7e9a44-5c21-4f0e-8d9b-7a6c5e4d3b21", "updatedAt": 3000, "deleted": true }, { "id": "a3d5e7f9-0b1c-4d2e-8f30-415263748596", "updatedAt": 1000, "deleted": false } ],
+      "peer": [ { "id": "6f1c2b9e-1d2a-4c7e-9a51-3b8f0d2e4a10", "updatedAt": 1000, "deleted": false }, { "id": "0b7e9a44-5c21-4f0e-8d9b-7a6c5e4d3b21", "updatedAt": 2000, "deleted": false }, { "id": "a3d5e7f9-0b1c-4d2e-8f30-415263748596", "updatedAt": 5000, "deleted": false } ],
+      "send": [ "6f1c2b9e-1d2a-4c7e-9a51-3b8f0d2e4a10", "0b7e9a44-5c21-4f0e-8d9b-7a6c5e4d3b21" ]
+    },
+    {
+      "name": "same time: a delete still goes out, equal entries don't",
+      "local": [ { "id": "6f1c2b9e-1d2a-4c7e-9a51-3b8f0d2e4a10", "updatedAt": 1000, "deleted": true }, { "id": "0b7e9a44-5c21-4f0e-8d9b-7a6c5e4d3b21", "updatedAt": 1000, "deleted": false } ],
+      "peer": [ { "id": "6f1c2b9e-1d2a-4c7e-9a51-3b8f0d2e4a10", "updatedAt": 1000, "deleted": false }, { "id": "0b7e9a44-5c21-4f0e-8d9b-7a6c5e4d3b21", "updatedAt": 1000, "deleted": false } ],
+      "send": [ "6f1c2b9e-1d2a-4c7e-9a51-3b8f0d2e4a10" ]
+    }
+  ]
+}

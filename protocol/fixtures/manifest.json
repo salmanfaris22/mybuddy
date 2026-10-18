@@ -1,0 +1,536 @@
+{
+  "valid": [
+    {
+      "file": "valid/pairing.request.json",
+      "receiver": "mac",
+      "type": "pairing.request"
+    },
+    {
+      "file": "valid/pairing.approved.json",
+      "receiver": "phone",
+      "type": "pairing.approved"
+    },
+    {
+      "file": "valid/session.request.json",
+      "receiver": "mac",
+      "type": "session.request"
+    },
+    {
+      "file": "valid/session.approved.json",
+      "receiver": "phone",
+      "type": "session.approved"
+    },
+    {
+      "file": "valid/session.closed.json",
+      "receiver": "phone",
+      "type": "session.closed"
+    },
+    {
+      "file": "valid/host.heartbeat.json",
+      "receiver": "mac",
+      "type": "host.heartbeat"
+    },
+    {
+      "file": "valid/host.status.json",
+      "receiver": "phone",
+      "type": "host.status"
+    },
+    {
+      "file": "valid/error.json",
+      "receiver": "phone",
+      "type": "error"
+    },
+    {
+      "file": "valid/webrtc.answer.json",
+      "receiver": "mac",
+      "type": "webrtc.answer"
+    },
+    {
+      "file": "valid/webrtc.ice.json",
+      "receiver": "mac",
+      "type": "webrtc.ice"
+    },
+    {
+      "file": "valid/webrtc.ice.end.json",
+      "receiver": "phone",
+      "type": "webrtc.ice"
+    },
+    {
+      "file": "valid/webrtc.offer.json",
+      "receiver": "phone",
+      "type": "webrtc.offer"
+    },
+    {
+      "file": "valid/screen.start.json",
+      "receiver": "mac",
+      "type": "screen.start"
+    },
+    {
+      "file": "valid/screen.start.defaults.json",
+      "receiver": "mac",
+      "type": "screen.start"
+    },
+    {
+      "file": "valid/screen.update.json",
+      "receiver": "mac",
+      "type": "screen.update"
+    },
+    {
+      "file": "valid/screen.stop.json",
+      "receiver": "mac",
+      "type": "screen.stop"
+    },
+    {
+      "file": "valid/screen.state.starting.json",
+      "receiver": "phone",
+      "type": "screen.state"
+    },
+    {
+      "file": "valid/screen.state.live.json",
+      "receiver": "phone",
+      "type": "screen.state"
+    },
+    {
+      "file": "valid/screen.state.failed.json",
+      "receiver": "phone",
+      "type": "screen.state"
+    },
+    {
+      "file": "valid/input.pointer.json",
+      "receiver": "mac",
+      "type": "input.pointer"
+    },
+    {
+      "file": "valid/input.button.json",
+      "receiver": "mac",
+      "type": "input.button"
+    },
+    {
+      "file": "valid/input.scroll.json",
+      "receiver": "mac",
+      "type": "input.scroll"
+    },
+    {
+      "file": "valid/input.key.json",
+      "receiver": "mac",
+      "type": "input.key"
+    },
+    {
+      "file": "valid/input.text.json",
+      "receiver": "mac",
+      "type": "input.text"
+    },
+    {
+      "file": "valid/host.app.list.request.json",
+      "receiver": "mac",
+      "type": "host.app.list"
+    },
+    {
+      "file": "valid/host.app.list.result.json",
+      "receiver": "phone",
+      "type": "host.app.list"
+    },
+    {
+      "file": "valid/host.app.open.json",
+      "receiver": "mac",
+      "type": "host.app.open"
+    },
+    {
+      "file": "valid/host.file.list.json",
+      "receiver": "mac",
+      "type": "host.file.list"
+    },
+    {
+      "file": "valid/host.file.open.result.json",
+      "receiver": "phone",
+      "type": "host.file.open"
+    },
+    {
+      "file": "valid/file.offer.json",
+      "receiver": "mac",
+      "type": "file.offer"
+    },
+    {
+      "file": "valid/file.chunk.json",
+      "receiver": "phone",
+      "type": "file.chunk"
+    },
+    {
+      "file": "valid/file.request.json",
+      "receiver": "mac",
+      "type": "file.request"
+    },
+    {
+      "file": "valid/screen.start.smooth.json",
+      "receiver": "mac",
+      "type": "screen.start"
+    },
+    {
+      "file": "valid/notification.posted.json",
+      "receiver": "mac",
+      "type": "notification.posted"
+    },
+    {
+      "file": "valid/notification.posted.from-mac.json",
+      "receiver": "phone",
+      "type": "notification.posted"
+    },
+    {
+      "file": "valid/notification.removed.json",
+      "receiver": "mac",
+      "type": "notification.removed"
+    },
+    {
+      "file": "valid/notes.index.json",
+      "receiver": "mac",
+      "type": "notes.index"
+    },
+    {
+      "file": "valid/notes.put.json",
+      "receiver": "phone",
+      "type": "notes.put"
+    },
+    {
+      "file": "valid/notes.put.tombstone.json",
+      "receiver": "mac",
+      "type": "notes.put"
+    },
+    {
+      "file": "valid/connect.offer.json",
+      "receiver": "phone",
+      "type": "connect.offer"
+    },
+    {
+      "file": "valid/connect.enroll.json",
+      "receiver": "mac",
+      "type": "connect.enroll"
+    },
+    {
+      "file": "valid/connect.enrolled.json",
+      "receiver": "phone",
+      "type": "connect.enrolled"
+    },
+    {
+      "file": "valid/file.offer.requested.json",
+      "receiver": "phone",
+      "type": "file.offer"
+    },
+    {
+      "file": "valid/file.start.json",
+      "receiver": "phone",
+      "type": "file.start"
+    },
+    {
+      "file": "valid/file.ack.json",
+      "receiver": "mac",
+      "type": "file.ack"
+    },
+    {
+      "file": "valid/file.error.json",
+      "receiver": "phone",
+      "type": "file.error"
+    },
+    {
+      "file": "valid/file.complete.json",
+      "receiver": "mac",
+      "type": "file.complete"
+    },
+    {
+      "file": "valid/clipboard.offer.json",
+      "receiver": "mac",
+      "type": "clipboard.offer"
+    },
+    {
+      "file": "valid/clipboard.content.json",
+      "receiver": "phone",
+      "type": "clipboard.content"
+    },
+    {
+      "file": "valid/ai.request.json",
+      "receiver": "mac",
+      "type": "ai.request"
+    },
+    {
+      "file": "valid/ai.request.agent.json",
+      "receiver": "mac",
+      "type": "ai.request"
+    },
+    {
+      "file": "valid/session.approved.agents.json",
+      "receiver": "phone",
+      "type": "session.approved"
+    },
+    {
+      "file": "valid/ai.delta.json",
+      "receiver": "phone",
+      "type": "ai.delta"
+    },
+    {
+      "file": "valid/ai.complete.json",
+      "receiver": "phone",
+      "type": "ai.complete"
+    },
+    {
+      "file": "valid/voice.transcript.json",
+      "receiver": "mac",
+      "type": "voice.transcript"
+    },
+    {
+      "file": "valid/voice.intent.proposed.json",
+      "receiver": "phone",
+      "type": "voice.intent.proposed"
+    },
+    {
+      "file": "valid/health.snapshot.request.json",
+      "receiver": "mac",
+      "type": "health.snapshot.request"
+    },
+    {
+      "file": "valid/health.snapshot.request.all.json",
+      "receiver": "mac",
+      "type": "health.snapshot.request"
+    },
+    {
+      "file": "valid/unknown-fields-ignored.json",
+      "receiver": "mac",
+      "type": "host.heartbeat"
+    }
+  ],
+  "invalid": [
+    {
+      "file": "invalid/malformed-json.json",
+      "receiver": "mac",
+      "error": "malformed_json"
+    },
+    {
+      "file": "invalid/not-an-object.json",
+      "receiver": "mac",
+      "error": "invalid_envelope"
+    },
+    {
+      "file": "invalid/missing-type.json",
+      "receiver": "mac",
+      "error": "invalid_envelope"
+    },
+    {
+      "file": "invalid/unsupported-version.json",
+      "receiver": "mac",
+      "error": "unsupported_version"
+    },
+    {
+      "file": "invalid/unknown-type.json",
+      "receiver": "mac",
+      "error": "unknown_type"
+    },
+    {
+      "file": "invalid/bad-session-id.json",
+      "receiver": "mac",
+      "error": "invalid_envelope"
+    },
+    {
+      "file": "invalid/sequence-zero.json",
+      "receiver": "mac",
+      "error": "invalid_envelope"
+    },
+    {
+      "file": "invalid/sequence-float.json",
+      "receiver": "mac",
+      "error": "invalid_envelope"
+    },
+    {
+      "file": "invalid/bad-sent-at.json",
+      "receiver": "mac",
+      "error": "invalid_envelope"
+    },
+    {
+      "file": "invalid/payload-not-object.json",
+      "receiver": "mac",
+      "error": "invalid_envelope"
+    },
+    {
+      "file": "invalid/pointer-missing-x.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/pointer-out-of-range.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/button-unknown-action.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/key-not-allowlisted.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/key-bad-modifier.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/text-too-long.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/text-control-char.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/text-empty.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/app-open-bad-bundle.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/file-list-nul.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/file-offer-slash-name.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/file-offer-too-large.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/file-offer-bad-uuid.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/file-offer-bad-hash.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/clipboard-too-large.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/ai-request-no-messages.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/wrong-direction.json",
+      "receiver": "mac",
+      "error": "wrong_direction"
+    },
+    {
+      "file": "invalid/capability-unknown.json",
+      "receiver": "phone",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/too-large-input.json",
+      "receiver": "mac",
+      "error": "too_large"
+    },
+    {
+      "file": "invalid/screen-start-bad-quality.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/file-request-nul.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/file-request-no-id.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/file-request-from-mac.json",
+      "receiver": "phone",
+      "error": "wrong_direction"
+    },
+    {
+      "file": "invalid/file-error-unknown-code.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/screen-start-fps-too-high.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/screen-state-unknown-state.json",
+      "receiver": "phone",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/screen-state-bad-reason.json",
+      "receiver": "phone",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/screen-state-wrong-direction.json",
+      "receiver": "mac",
+      "error": "wrong_direction"
+    },
+    {
+      "file": "invalid/webrtc-offer-from-phone.json",
+      "receiver": "mac",
+      "error": "wrong_direction"
+    },
+    {
+      "file": "invalid/notification-bad-redaction.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/notification-text-too-long.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/ai-request-agent-bad-level.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/notes-put-too-long.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/notes-put-not-a-uuid.json",
+      "receiver": "phone",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/connect-enroll-from-mac.json",
+      "receiver": "phone",
+      "error": "wrong_direction"
+    },
+    {
+      "file": "invalid/connect-offer-short-host-id.json",
+      "receiver": "phone",
+      "error": "invalid_payload"
+    },
+    {
+      "file": "invalid/connect-enroll-signature-too-long.json",
+      "receiver": "mac",
+      "error": "invalid_payload"
+    }
+  ]
+}

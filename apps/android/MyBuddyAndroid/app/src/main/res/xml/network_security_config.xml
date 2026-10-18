@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  MyBuddy talks to the paired Mac over a plain LAN WebSocket because the Mac has no CA-issued
+  certificate for a private IP. Every message after the handshake is encrypted and authenticated
+  end-to-end with MBH1 (ECDH P-256 + AES-256-GCM, Mac key pinned from the QR code), so the transport
+  carries only ciphertext. Android cannot scope cleartext to private IP ranges, hence the base config.
+  Internet mode (MyBuddy Connect) always uses HTTPS/WSS. The app itself refuses to dial anything but
+  loopback/private/link-local/.local addresses (PairingInvitation.isLanHost), mirroring the Mac.
+-->
+<network-security-config xmlns:tools="http://schemas.android.com/tools">
+    <base-config cleartextTrafficPermitted="true" tools:ignore="InsecureBaseConfiguration">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

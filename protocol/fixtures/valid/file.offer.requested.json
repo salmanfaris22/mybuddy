@@ -1,0 +1,1 @@
+{"version":1,"type":"file.offer","sessionId":"s_fixture0001","sequence":1,"sentAt":"2026-10-16T08:30:00.000Z","payload":{"transferId":"6f1c2b9e-1d2a-4c7e-9a51-3b8f0d2e4a10","name":"a.pdf","size":2097152,"sha256":"9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08","chunkSize":65536,"requestId":"0b7e9a44-5c21-4f0e-8d9b-7a6c5e4d3b21"}}

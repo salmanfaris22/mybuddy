@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MyBuddy "companion orbit": core, orbit ring, satellite. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
+    <path android:strokeColor="#739AA6B5" android:strokeWidth="2.6"
+        android:pathData="M54,32 a22,22 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FFB8F36B" android:pathData="M54,44 a10,10 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FF6CDCF5" android:pathData="M69.6,32.9 a5.5,5.5 0 1,0 0.01,0 z" />
+</vector>

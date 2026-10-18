@@ -1,0 +1,1 @@
+{"version":1,"type":"error","sessionId":"s_fixture0001","sequence":1,"sentAt":"2026-10-16T08:30:00.000Z","payload":{"code":"path_denied","message":"That path is outside the folders you shared.","retryable":false}}

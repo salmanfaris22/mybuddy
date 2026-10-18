@@ -1,0 +1,1 @@
+{"version":1,"type":"voice.intent.proposed","sessionId":"s_fixture0001","sequence":1,"sentAt":"2026-10-16T08:30:00.000Z","payload":{"utteranceId":"0b7e9a44-5c21-4f0e-8d9b-7a6c5e4d3b21","intentId":"open_folder","intent":{"kind":"openFolder","folder":"downloads"},"requiresApproval":false,"risk":"low"}}

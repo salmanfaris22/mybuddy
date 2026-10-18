@@ -1,0 +1,1 @@
+{"version":1,"type":"ai.request","sessionId":"s_fixture0001","sequence":1,"sentAt":"2026-10-16T08:30:00.000Z","payload":{"requestId":"0b7e9a44-5c21-4f0e-8d9b-7a6c5e4d3b21","mode":"agent","messages":[{"role":"user","text":"Explain how pairing works in this repo."}],"contextSources":[],"agent":{"kind":"claude_code","workspaceId":"ws_7f3a","level":"read_only"}}}

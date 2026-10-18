@@ -1,0 +1,7 @@
+# Keep the build context to sources only.
+connect-api
+*.test
+*.out
+scripts/
+Dockerfile
+.dockerignore

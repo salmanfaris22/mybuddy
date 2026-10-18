@@ -1,0 +1,1 @@
+{"version":1,"type":"webrtc.ice","sessionId":"s_fixture0001","sequence":1,"sentAt":"2026-10-16T08:30:00.000Z","payload":{"candidate":"candidate:1 1 udp 2122260223 192.168.1.30 51234 typ host","sdpMid":"0","sdpMLineIndex":0}}

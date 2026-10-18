@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyBuddy</string>
+    <string name="notification_listener_label">MyBuddy — show notifications on your Mac</string>
+</resources>
